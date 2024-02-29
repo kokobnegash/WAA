@@ -1,0 +1,16 @@
+
+type Account {
+ accountNumber: String!
+ accountHolder: String!
+ balance:Float !
+
+}
+
+type Query {
+getAccounts(count: Int):[Account]
+getAccount(accountNumber: ID):Account
+}
+
+type Mutation {
+createAccount(accountNumber: String!, accountHolder: String!, balance: Float! ):Account
+}
